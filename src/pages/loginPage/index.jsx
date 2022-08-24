@@ -6,15 +6,15 @@ import { AuthContext } from '../../contexts/auth'
 import "./styles.css"
 
 const LoginPage = () => {
-    const { authenticated, login } = useContext(AuthContext)
+    const { authenticated, acesso } = useContext(AuthContext)
 
-    const [user, setUser] = useState("")
+    const [login, setUser] = useState("")
     const [password, setPassword] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        console.log("submit", {user, password});
-        login(user, password)
+        console.log("submit", {login, password});
+        acesso(login, password)
     }
 
     return (
@@ -28,7 +28,7 @@ const LoginPage = () => {
                     type="user" 
                     name="user" 
                     id="user" 
-                    value={user} 
+                    value={login} 
                     onChange={(event) => setUser(event.target.value)} />
                 </div>
                 <div className="field">
