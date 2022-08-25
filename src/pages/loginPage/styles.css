@@ -1,4 +1,5 @@
-#login {
+#acesso {
+    background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,26 +8,31 @@
     padding: 0 2rem;
 }
 
-#login .form {
-    background-color: #f1f1f1;
+
+#acesso .form {
+    background-color: #0fb42a;
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
 
 }
-#login .field {
+
+#acesso .form h1{
+    text-align: center;
+}
+#acesso .field {
     padding-bottom: 0.5rem;
 }
 
-#login .field label {
+#acesso .field label {
     display: block;
 }
 
-#login .field input {
+#acesso .field input {
     width: 100%;
 }
 
-#login .actions {
+#acesso .actions {
     text-align: center;
     margin-top: 0.5rem;
 }

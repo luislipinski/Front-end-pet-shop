@@ -8,7 +8,7 @@ import "./styles.css"
 const LoginPage = () => {
     const { authenticated, acesso } = useContext(AuthContext)
 
-    const [login, setUser] = useState("")
+    const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -18,18 +18,18 @@ const LoginPage = () => {
     }
 
     return (
-        <div id="login">
-            <h1 className="title">Acesso de Usuários</h1>
-            <p>{String(authenticated)}</p>
+        <div id="acesso">
+            <h1 id="title">PET SHOP APP</h1>
             <form className="form" onSubmit={handleSubmit}>
+                <h1 className="title">Acesso de Usuários</h1>
                 <div className="field">
-                    <label htmlFor="user">Usuário</label>
+                    <label htmlFor="login">Usuário</label>
                     <input 
-                    type="user" 
-                    name="user" 
-                    id="user" 
+                    type="login" 
+                    name="login" 
+                    id="login" 
                     value={login} 
-                    onChange={(event) => setUser(event.target.value)} />
+                    onChange={(event) => setLogin(event.target.value)} />
                 </div>
                 <div className="field">
                     <label htmlFor="password">Senha</label>
